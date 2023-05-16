@@ -46,3 +46,9 @@ while True:
     elif codigo == '201':
         print('Você pediu um Chá Gelado no Valor de 4,00')
         acumulador = acumulador + 4
+
+    else:
+        print('Opção Inválida!')
+        continue
+
+    
