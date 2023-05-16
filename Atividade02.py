@@ -9,12 +9,40 @@ print('|'+5*' '+'104'+ 5*' ' +'|' +8*' '+'X-Bacon'+22*' '+'|'+2*' '+'14,00'+2*' 
 print('|'+5*' '+'105'+ 5*' ' +'|' +8*' '+'X-Tudo'+23*' '+'|'+2*' '+'17,00'+2*' '+'|')
 print('|'+5*' '+'200'+ 5*' ' +'|' +8*' '+'Refrigerenta Lata'+12*' '+'|'+2*' '+'5,00'+3*' '+'|')
 print('|'+5*' '+'210'+ 5*' ' +'|' +8*' '+'Chá Gelado'+19*' '+'|'+2*' '+'4,00'+3*' '+'|')
+print(64*'*')
+acumulador = 0
+while True:
+    ...
+    codigo = input('Insira o código desejado: ')
 
-valor_cachorroQuente = 9.00
-valor_cachorroQuenteDuplo = 11.00
-valor_xEgg = 12.00
-valor_xSalada = 12.00
-valor_xBacon = 14.00
-valor_xTudo = 17.00
-valor_refrigeranteLata = 5.00
-valor_chaGelado = 4.00
+    if codigo == '100':
+        print('Você pediu um Cachorro Quente no valor de 9,00')
+        acumulador = acumulador + 9
+
+    elif codigo == '101':
+        print('Você pediu um Cachorro Quente Duplo no valor de 11,00')
+        acumulador = acumulador + 11
+
+    elif codigo == '102':
+        print('Você pediu um X-Egg no valor de 12,00')
+        acumulador = acumulador + 12
+
+    elif codigo == '103':
+        print('Você pediu um X-Salada no Valor de 12,00')
+        acumulador = acumulador + 12
+
+    elif codigo == '104':
+        print('Você pediu um X-Bacon no Valor de 14,00')
+        acumulador = acumulador + 14
+
+    elif codigo == '105':
+        print('Você pediu um X-Tudo no valor de 17,00')
+        acumulador = acumulador + 17
+
+    elif codigo == '200':
+        print('Você pediu um Refrigerante no Valor de 5,00')
+        acumulador = acumulador + 5
+
+    elif codigo == '201':
+        print('Você pediu um Chá Gelado no Valor de 4,00')
+        acumulador = acumulador + 4
