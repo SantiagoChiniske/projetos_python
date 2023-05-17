@@ -13,11 +13,13 @@ print(64*'*')
 acumulador = 0
 while True:
     ...
-    codigo = input('Insira o código desejado: ')
+    codigo = input('Insira o código desejado: ') # Entrada do código do produto
 
+
+    #verificação qual é produto
     if codigo == '100':
         print('Você pediu um Cachorro Quente no valor de 9,00')
-        acumulador = acumulador + 9
+        acumulador = acumulador + 9 # valor que tinha no acumulador e soma com 9
 
     elif codigo == '101':
         print('Você pediu um Cachorro Quente Duplo no valor de 11,00')
@@ -48,14 +50,15 @@ while True:
         acumulador = acumulador + 4
 
     else:
+        #caso não encontre ele printa a frase e volta para o começo
         print('Opção Inválida!')
         continue
     
+    #Aqui ele vai verificar se o cliente vai querer mais ou não
     print('Deseja pedir mais alguma coisa :')
     print('1 - Sim')
     print('2- Não')
     pedir_mais = input('>>')
-
 
     if pedir_mais == 'Sim':
         continue
@@ -63,4 +66,5 @@ while True:
     else:
         break
 
+#Aqui ele vai dar o total do valor a ser pago
 print(f'O total a ser pago é : {acumulador:.2f}')
