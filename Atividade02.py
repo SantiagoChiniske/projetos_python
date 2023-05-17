@@ -50,5 +50,17 @@ while True:
     else:
         print('Opção Inválida!')
         continue
-
     
+    print('Deseja pedir mais alguma coisa :')
+    print('1 - Sim')
+    print('2- Não')
+    pedir_mais = input('>>')
+
+
+    if pedir_mais == 'Sim':
+        continue
+        
+    else:
+        break
+
+print(f'O total a ser pago é : {acumulador:.2f}')
