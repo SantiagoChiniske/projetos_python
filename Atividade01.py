@@ -17,21 +17,21 @@ elif  qtd_produto >= 10 and qtd_produto <= 99:
     valor_desconto = valor_total* 0.05
     valor_produto_desconto = valor_total - valor_desconto
     print(f'O valor sem desconto: {valor_total}')
-    print('O valor  com desconto: {0:.2f}'.format(valor_produto_desconto))
+    print('O valor  com desconto: {0:.2f} (desconto 5%)'.format(valor_produto_desconto))
 
 elif qtd_produto >= 100 and qtd_produto <= 999:
 #Entre as quantidade 10e 99,tem direito a  10% desconto
     valor_desconto = valor_total* 0.1
     valor_produto_desconto = valor_total - valor_desconto
     print(f'O valor sem desconto: {valor_total}')
-    print('O valor  com desconto: {0:.2f}'.format(valor_produto_desconto))
+    print('O valor  com desconto: {0:.2f}  (desconto 10%)'.format(valor_produto_desconto))
 
 elif qtd_produto >= 1000:
 #Entre as quantidade 1000 até o infinito,tem direito a  15   % desconto
     valor_desconto = valor_total* 0.15
     valor_produto_desconto = valor_total - valor_desconto
     print(f'O valor sem desconto: {valor_total}')
-    print('O valor  com desconto: {0:.2f}'.format(valor_produto_desconto))
+    print('O valor  com desconto: {0:.2f} (desconto 15%)'.format(valor_produto_desconto))
     
 else:
 #Aqui caso o usário erre a entrada de informações
