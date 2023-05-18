@@ -37,7 +37,31 @@ def dimensoesObjeto():
 #incio da função dimensoesObjeto
 
 def pesoObjeto():
-    print('teste')
+    
+    while True:
+
+        try:
+
+            pesoObjeto = float(input('Digite o peso do objeto (em kg): '))
+                        
+            if pesoObjeto <= 0.1:
+                return pesoObjeto *1
+            
+            elif 0.1 <= pesoObjeto < 1:
+                return pesoObjeto * 1.5
+            
+            elif 1 <= pesoObjeto < 10:
+                return pesoObjeto * 2
+            
+            elif 10  <= pesoObjeto < 30:
+                return pesoObjeto * 3
+            
+            elif pesoObjeto >=   30:
+                print('Não aceitamos objetos tão pesados')
+                continue
+            
+        except ValueError:
+             print('Você digitou peso do objeto com valor não numérica')
 
 # fim da função dimensoesObjeto
 
@@ -52,3 +76,5 @@ print('Bem Vindo a Companhia de Logística Santiago Chiniske Pereira ')
 
 dimensão = dimensoesObjeto()
 print(dimensão)
+peso = pesoObjeto()
+print(peso)
