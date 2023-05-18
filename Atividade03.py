@@ -42,8 +42,8 @@ def pesoObjeto():
 
         try:
 
-            pesoObjeto = float(input('Digite o peso do objeto (em kg): '))
             pesoObjeto = int(input('Digite o peso do objeto (em kg): '))
+
             if pesoObjeto <= 0.1:
                 return 1
             
