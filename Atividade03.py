@@ -7,12 +7,14 @@ def dimensoesObjeto():
     while True:
 
         try:
+            #Aqui é entrada dos valores 
             alturaObjeto = int(input('Digite a altura do objeto (cm): '))
             comprimetoObjeto = int(input('Digiteo comprimento do objeto (cm): '))
             larguraObjeto = int(input ('Digite a largura do objeto (cm):'))
         
             volumeCaixa = alturaObjeto * larguraObjeto * comprimetoObjeto
 
+            #Aqui vai verificar qual é a dimensão e qual vai ser o valor
             if volumeCaixa <1000:
                 return 10
             
@@ -27,6 +29,7 @@ def dimensoesObjeto():
                 print('Não aceitamos objetos com dimensão tão grande ')
                 continue
 
+                #Aqui caso o usuário insira um valor errado ou incorreto
         except ValueError:
             print('Você digitou alguma dimensão do objeto com valor não numérica')
             print('Por favor entre com as dimensões desejadas novamente')
@@ -42,8 +45,11 @@ def pesoObjeto():
 
         try:
 
+            #entrada dos valores
             pesoObjeto = int(input('Digite o peso do objeto (em kg): '))
 
+
+            #Verificar qual o valor que será multilplicado e retorna o valor
             if pesoObjeto <= 0.1:
                 return 1
             
@@ -60,6 +66,7 @@ def pesoObjeto():
                 print('Não aceitamos objetos tão pesados')
                 continue
             
+            #Caso o usuário coloque um valor incorreto
         except ValueError:
              print('Você digitou peso do objeto com valor não numérica')
 
@@ -72,6 +79,7 @@ def rotaObjeto():
    while True:
         print ('Selecione a rota:')
 
+        #Aqui ele vai selecionar a distância 
         rota = input ('BR - De Brasília até Rio de Janeiro \n'+
                              'BS - De Brasília até São Paulo \n'+
                              'RB - Rio de Janeiro até Brasília'+
@@ -79,7 +87,9 @@ def rotaObjeto():
                              'SR - De São Paulo até Rio de Janeiro\n'+
                              'SB - De São Paulo até Brasília \n'+
                              '>>')
-        rota  = rota.upper()
+        rota  = rota.upper()# Aqui vai transformar a letras em Maiusculo automaticamente 
+        
+        #Verificar qual é a rota que foi seleciona e retorna o multiplicador 
         if rota == 'RS':
             return 1
         
@@ -106,9 +116,11 @@ def rotaObjeto():
 # fim da função dimensoesObjeto
 
 print('Bem Vindo a Companhia de Logística Santiago Chiniske Pereira ')
-
+# Aqui vai rodar as funçoes e resultado final
 dimensão = dimensoesObjeto()
 peso = pesoObjeto()
 rota = rotaObjeto()
 total = dimensão * peso * rota
+
+#Aqui vai sair o resultado total 
 print('Total a pagar(R$): {} (dimensão: {} * peso: {} * rota: {})'.format(total,dimensão,peso,rota))
