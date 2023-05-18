@@ -7,9 +7,9 @@ def dimensoesObjeto():
     while True:
 
         try:
-            alturaObjeto = float(input('Digite a altura do objeto (cm): '))
-            comprimetoObjeto = float(input('Digiteo comprimento do objeto (cm): '))
-            larguraObjeto = float(input ('Digite a largura do objeto (cm):'))
+            alturaObjeto = int(input('Digite a altura do objeto (cm): '))
+            comprimetoObjeto = int(input('Digiteo comprimento do objeto (cm): '))
+            larguraObjeto = int(input ('Digite a largura do objeto (cm):'))
         
             volumeCaixa = alturaObjeto * larguraObjeto * comprimetoObjeto
 
@@ -43,18 +43,18 @@ def pesoObjeto():
         try:
 
             pesoObjeto = float(input('Digite o peso do objeto (em kg): '))
-                        
+            pesoObjeto = int(input('Digite o peso do objeto (em kg): '))
             if pesoObjeto <= 0.1:
-                return pesoObjeto *1
+                return 1
             
             elif 0.1 <= pesoObjeto < 1:
-                return pesoObjeto * 1.5
+                return 1.5
             
             elif 1 <= pesoObjeto < 10:
-                return pesoObjeto * 2
+                return  2
             
             elif 10  <= pesoObjeto < 30:
-                return pesoObjeto * 3
+                return  3
             
             elif pesoObjeto >=   30:
                 print('Não aceitamos objetos tão pesados')
@@ -68,13 +68,47 @@ def pesoObjeto():
 #incio da função dimensoesObjeto
 
 def rotaObjeto():
-    print('teste')
+   
+   while True:
+        print ('Selecione a rota:')
+
+        rota = input ('BR - De Brasília até Rio de Janeiro \n'+
+                             'BS - De Brasília até São Paulo \n'+
+                             'RB - Rio de Janeiro até Brasília'+
+                             'RS - De Rio de Janeiro até São Paulo\n'+
+                             'SR - De São Paulo até Rio de Janeiro\n'+
+                             'SB - De São Paulo até Brasília \n'+
+                             '>>')
+        rota  = rota.upper()
+        if rota == 'RS':
+            return 1
+        
+        elif rota =='SR':
+            return 1
+        
+        elif rota =='BS':
+            return 1.2
+        
+        elif rota =='SB':
+            return 1.2
+        
+        elif rota =='BR':
+            return 1.5
+        
+        elif rota =='RB':
+            return 1.5
+        
+        else:
+            print('Você digitou uma rota que não existe')
+            continue
+    
 
 # fim da função dimensoesObjeto
 
 print('Bem Vindo a Companhia de Logística Santiago Chiniske Pereira ')
 
 dimensão = dimensoesObjeto()
-print(dimensão)
 peso = pesoObjeto()
-print(peso)
+rota = rotaObjeto()
+total = dimensão * peso * rota
+print('Total a pagar(R$): {} (dimensão: {} * peso: {} * rota: {})'.format(total,dimensão,peso,rota))
