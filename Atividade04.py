@@ -26,7 +26,53 @@ def cadastrar_peca(codigo):
 
 #------Início das Consulta peça-----
 def consulta_peca():
-    ...
+    print('Você Selecionou a opção de Consultar Peças')
+    
+    while True:
+        opcao_consulta = input('\nEscolha a opção desejada: \n'+
+                                    '1- Consultar TODOS as peças \n'+
+                                    '2- Consultar Peças por CÓDIGO\n'+
+                                    '3- Consultar Peças por FABRICANTE\n'+
+                                    '4-Retornar\n'+
+                                    '>>')
+        
+        if opcao_consulta == '1':
+                print('Você escolheu a opção consultar TODOS os produtos')
+                for produto in lista_pecas: #Produto vai varrer toda a lista de produto
+                    print('------------------------------')
+                    for key,values in produto.items():# Varrer todos  oso conjutos chaves e valor do dicionario produto
+                        print('\n{} :  {}'.format(key,values))
+                    print('------------------------------')
+                    
+        elif opcao_consulta== '2':
+            print('Você escolheu a opção consultar produtos por CÓDIGO')
+            valor_desejado = int(input('Entre com CÓDIGO desejado: '))
+
+            for produto in lista_pecas:
+                if produto['codigo'] == valor_desejado: #o valor do campo codigo desse dicionario é igual o valor desejado 
+                        print('------------------------------')
+                        for key,values in produto.items():# Varrer todos  oso conjutos chaves e valor do dicionario produto
+                            print('\n{} :  {}'.format(key,values))
+                        print('------------------------------')
+            
+    
+        elif opcao_consulta== '3':
+                print('Você escolheu a opção consultar por FABRICANTE')
+                valor_desejado = input('Entre com FABRICANTE desejado: ')
+
+                for produto in lista_pecas:
+                    if produto['fabricante'] == valor_desejado: #o valor do campo codigo desse dicionario é igual o valor desejado 
+                        print('------------------------------')
+                        for key,values in produto.items():# Varrer todos  oso conjutos chaves e valor do dicionario produto
+                            print('\n{} :  {}'.format(key,values))
+                        print('------------------------------')
+
+        elif opcao_consulta== '4':
+            return #Sai da função consultar_produto e volta para o amin
+
+        else:
+                print('Opção inválida. tente novamente')
+                continue
 #------Fim das Consulta peça-----
 
 #------Início das Remover peça-----
