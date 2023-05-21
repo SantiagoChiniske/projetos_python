@@ -2,13 +2,26 @@
 
 #------Início das variáveis globais-----
 lista_pecas = []
-codigo_pecas = 0
+codigo_pecas = 000
 #------Fim das variáveis globais-----
 
 
 #------Início das Cadastrar peça-----
 def cadastrar_peca(codigo):
-    ...
+    print('Você selecionou a Opção de Cadastrar Peça')
+    print('Codigo da Peça: {}'.format(codigo))
+
+    nome = input('Por favor entre com o NOME da peça:')
+    fabricante = input('Por favor entre com o FABRICANTE da peça:')
+    preco = int(input('Entre com o VALOR(R$) do produto:'))
+
+    dicionario_peca = {
+        'codigo': codigo,
+        'nome': nome,
+        'fabricante': fabricante,
+        'preco': preco
+    }
+    lista_pecas.append(dicionario_peca.copy())
 #------Fim das Cadastrar peça-----
 
 #------Início das Consulta peça-----
