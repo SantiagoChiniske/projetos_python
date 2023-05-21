@@ -41,7 +41,7 @@ def consulta_peca():
                 for produto in lista_pecas: #Produto vai varrer toda a lista de produto
                     print('------------------------------')
                     for key,values in produto.items():# Varrer todos  oso conjutos chaves e valor do dicionario produto
-                        print('\n{} :  {}'.format(key,values))
+                        print('{} :  {}'.format(key,values))
                     print('------------------------------')
                     
         elif opcao_consulta== '2':
@@ -77,7 +77,14 @@ def consulta_peca():
 
 #------Início das Remover peça-----
 def remover_peca():
-    ...
+
+    print('Bem vindo ao menu de Remover Produtos')
+    valor_desejado = int(input('Entre com CÓDIGO do produto que deseja remover: '))
+
+    for produto in lista_pecas:
+               if produto['codigo'] == valor_desejado: #o valor do campo codigo desse dicionario é igual o valor desejado 
+                    lista_pecas.remove(produto)
+                    print('Produto Removido')
 #------Fim das Remover peça-----
 
 #------Início do main-----
