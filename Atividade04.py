@@ -9,12 +9,14 @@ codigo_pecas = 000
 #------Início das Cadastrar peça-----
 def cadastrar_peca(codigo):
     print('Você selecionou a Opção de Cadastrar Peça')
-    print('Codigo da Peça: {}'.format(codigo))
+    print('Codigo da Peça: {}'.format(codigo)) #Aqui já vai mostrar o código do produto
 
+    #As informações que o usuário vai inserir
     nome = input('Por favor entre com o NOME da peça:')
     fabricante = input('Por favor entre com o FABRICANTE da peça:')
     preco = int(input('Entre com o VALOR(R$) do produto:'))
 
+    # Aqui é aonde vai ser armazenado as informações
     dicionario_peca = {
         'codigo': codigo,
         'nome': nome,
@@ -82,7 +84,7 @@ def remover_peca():
     valor_desejado = int(input('Entre com CÓDIGO do produto que deseja remover: '))
 
     for produto in lista_pecas:
-               if produto['codigo'] == valor_desejado: #o valor do campo codigo desse dicionario é igual o valor desejado 
+               if produto['codigo'] == valor_desejado: #o valor do campo codigo desse dicionario é igual o valor desejado que será removido
                     lista_pecas.remove(produto)
                     print('Produto Removido')
 #------Fim das Remover peça-----
@@ -96,6 +98,8 @@ while True:
                             '3- Remover Peças\n'+
                             '4-Sair \n'+
                             '>>')
+
+    #Verificar qual ele vai selecionar 
     if opcao_principal == '1':
             codigo_pecas = codigo_pecas + 1
             cadastrar_peca(codigo_pecas)
